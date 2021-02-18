@@ -1,0 +1,19 @@
+<Wizard>
+  <Global>
+    <CustomScript>DiskSelectionScript.vbs</CustomScript>
+  </Global>
+  <Pane id="DiskSelection">
+    <Body><![CDATA[
+                <H1>Disk Selection</H1>
+            <textarea id="ExampleOutput" style="width:100%" rows="10"></textarea>
+				    <br>
+				    <center><input type="button" name="btnClick" value="Run powershell script file " onclick="Run_PS_Script()"></center>
+				
+				    <FORM NAME="ValidForm">
+				        Input a disk number: 
+				        <INPUT NAME="Text1" TYPE="TEXT" SIZE="4" >
+				        <INPUT NAME="Submit" TYPE="BUTTON" VALUE="Submit" onclick=Submit_OnClick()>
+				        
+				    </FORM>]]></Body>
+  </Pane>
+</Wizard>
