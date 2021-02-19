@@ -36,7 +36,3 @@ Second:
             You can make "Format and Partition Disk (BIOS) & (UEFI)" for however many disks you want
         Whatever drive number you made the variable name equal to, you need to go back into the properties and set the "Disk Number" option to that(the little up and down arros about halfway down the screen)
 Now, click Apply and test it out. You can update the deployment share if you'd like
-
-
-
- 
