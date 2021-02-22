@@ -10,7 +10,7 @@ Sub Run_PS_Script()
     Dim WshShell, Command, PSFile,return, fso, file, text, Temp
     Set WshShell = CreateObject("WScript.Shell")
     Temp = WshShell.ExpandEnvironmentStrings("X:\Windows\Temp")
-    Command = "cmd /c echo Get-WmiObject Win32_DiskDrive ^| Out-File X:\Windows\Temp\output.txt -Encoding ascii > X:\Windows\Temp\process.ps1"
+    Command = "cmd /c echo Get-WmiObject win32_diskdrive ^| Select-Object Model, @{n='DiskNumber'; e={$_.Index}}, @{n='Size / GB';e={[math]::truncate($_.size / 1GB)}} ^| Fl ^| Out-File X:\Windows\Temp\output.txt -Encoding ascii > X:\Windows\Temp\process.ps1"
     PSFile = WshShell.Run(Command, 0, True)
     return = WshShell.Run("powershell.exe -ExecutionPolicy Unrestricted -File X:\Windows\Temp\process.ps1", 0, true)
     Set fso = CreateObject("Scripting.FileSystemObject")
